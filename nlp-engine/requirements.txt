@@ -1,0 +1,6 @@
+spacy==3.8.0
+scikit-learn==1.5.1
+pandas==2.2.3
+joblib==1.4.2
+transformers==4.44.0
+torch==2.5.0

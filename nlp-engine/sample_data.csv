@@ -1,0 +1,49 @@
+text,category,priority
+"I was charged twice for my last order, please refund the extra amount.",Billing,high
+"My invoice shows a fee I don't recognize, can you explain this charge?",Billing,medium
+"The subscription renewed but I cancelled it last month, this is unacceptable.",Billing,high
+"Can I get a copy of my billing history for the last six months?",Billing,low
+"I was billed in the wrong currency and lost money on conversion fees.",Billing,medium
+"There is a fraudulent charge on my account, I need this fixed immediately.",Billing,critical
+"My payment failed but the amount was still deducted from my bank.",Billing,high
+"I want to update my saved card details for future payments.",Billing,low
+"The app crashes every time I try to open my order history.",Technical,medium
+"The website has been down for two hours and I cannot log in at all.",Technical,critical
+"The search feature returns no results even for products I know exist.",Technical,medium
+"My password reset link is not arriving in my email.",Technical,high
+"The mobile app is extremely slow when loading images.",Technical,low
+"I keep getting a 500 error when I try to checkout.",Technical,critical
+"Dark mode setting resets every time I restart the app.",Technical,low
+"Two-factor authentication code never gets delivered to my phone.",Technical,high
+"My package was supposed to arrive three days ago and there's no update.",Delivery,high
+"The delivery tracking page has not updated in over 24 hours.",Delivery,medium
+"My order arrived completely empty, the box was open.",Delivery,critical
+"Can you tell me the estimated delivery window for my order?",Delivery,low
+"The courier left my package outside in the rain and it got damaged.",Delivery,high
+"I need to change my delivery address before the item ships.",Delivery,medium
+"My order shows delivered but I never received anything.",Delivery,critical
+"Delivery was a day early, just wanted to confirm that's normal.",Delivery,low
+"The product I received is broken and unusable right out of the box.",Product Quality,high
+"The material quality is much worse than shown in the pictures online.",Product Quality,medium
+"This is the second defective unit I've received in a row.",Product Quality,critical
+"The color of the item doesn't match what was advertised.",Product Quality,low
+"The item stopped working after just two days of normal use.",Product Quality,high
+"Packaging was slightly dented but the product itself is fine.",Product Quality,low
+"The size chart was inaccurate and the item doesn't fit at all.",Product Quality,medium
+"There's a strange smell coming from the product, is this normal?",Product Quality,medium
+"The support agent was rude and hung up on me during our call.",Customer Service,critical
+"I've been on hold for over 45 minutes and no one has answered.",Customer Service,high
+"Nobody has responded to my email from three days ago.",Customer Service,high
+"I just wanted to say the support chat was really helpful today.",Customer Service,low
+"I was given conflicting information by two different agents.",Customer Service,medium
+"The live chat disconnected in the middle of resolving my issue.",Customer Service,medium
+"Your support team resolved my issue quickly, thank you.",Customer Service,low
+"I want to file a formal complaint about how I was treated on the phone.",Customer Service,critical
+"I can't log into my account even though my password is correct.",Account Access,high
+"My account was suspended without any explanation.",Account Access,critical
+"I forgot which email I used to sign up, how can I recover it?",Account Access,medium
+"I want to delete my account and all associated data permanently.",Account Access,medium
+"Someone else seems to have accessed my account without permission.",Account Access,critical
+"Can I merge two accounts I accidentally created?",Account Access,low
+"My account got logged out on all devices for no reason.",Account Access,medium
+"I'd like to update the email address linked to my account.",Account Access,low

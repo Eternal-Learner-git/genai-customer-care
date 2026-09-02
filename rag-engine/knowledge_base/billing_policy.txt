@@ -1,0 +1,7 @@
+Billing and Charges Policy
+
+Customers are billed at the time of order confirmation, not at the time of shipment. Duplicate charges are rare but can occur due to network retries during checkout; these are automatically reversed within 3-5 business days, or manually by support if flagged.
+
+Subscription services renew automatically unless cancelled at least 24 hours before the renewal date. Cancelling a subscription stops future charges but does not refund the current billing period unless required by local consumer protection law.
+
+Customers can view and download their full billing history from their account settings at any time. For disputes about a specific charge, support should ask for the transaction ID and date to investigate.

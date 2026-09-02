@@ -1,0 +1,9 @@
+Account Security Policy
+
+If a customer suspects unauthorized access to their account, support should immediately guide them to reset their password and enable two-factor authentication if not already active.
+
+Accounts showing suspicious activity (such as logins from unrecognized locations) may be temporarily locked as a precaution. The account owner will be notified by email and asked to verify their identity before the account is restored.
+
+Support agents should never ask customers for their password directly. Identity verification should be done through the customer's registered email or phone number only.
+
+Customers who wish to permanently delete their account and associated data can do so by submitting a verified request; this action is irreversible and all order history will be lost.

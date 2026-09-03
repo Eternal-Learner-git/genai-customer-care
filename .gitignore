@@ -7,3 +7,5 @@ venv/
 model.joblib
 *.session.sql
 faiss_index/ 
+node_modules/
+dist/

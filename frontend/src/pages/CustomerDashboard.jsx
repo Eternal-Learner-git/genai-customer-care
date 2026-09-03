@@ -35,6 +35,10 @@ export default function CustomerDashboard() {
       setSubject("");
       setDescription("");
       await loadComplaints();
+      // Category/sentiment/priority/suggested_response are filled in by a background
+      // task (NLP + RAG services), which takes a few seconds - refresh once more
+      // after a short delay so they show up without the user having to do anything.
+      setTimeout(loadComplaints, 6000);
     } catch {
       setError("Couldn't submit your complaint. Please try again.");
     } finally {
@@ -87,7 +91,20 @@ export default function CustomerDashboard() {
         </button>
       </form>
 
-      <h2 className="mt-10 font-display text-2xl text-teal-700">Your complaints</h2>
+      <div className="mt-10 flex items-center justify-between">
+        <h2 className="font-display text-2xl text-teal-700">Your complaints</h2>
+        <button
+          onClick={loadComplaints}
+          className="text-sm text-teal-600 hover:underline"
+        >
+          Refresh
+        </button>
+      </div>
+
+      <p className="mt-1 text-xs text-ink/40">
+        Category, sentiment, and a suggested response are added automatically a few
+        seconds after you submit — refresh if you don't see them yet.
+      </p>
 
       {loading ? (
         <p className="mt-4 text-sm text-ink/50">Loading…</p>

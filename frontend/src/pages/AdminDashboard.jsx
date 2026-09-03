@@ -50,18 +50,23 @@ export default function AdminDashboard() {
       <div className="flex items-center justify-between">
         <h1 className="font-display text-3xl text-teal-700">All complaints</h1>
 
-        <select
-          value={statusFilter}
-          onChange={(e) => setStatusFilter(e.target.value)}
-          className="rounded-md border border-ink/15 px-3 py-1.5 text-sm"
-        >
-          <option value="all">All statuses</option>
-          {STATUS_OPTIONS.map((s) => (
-            <option key={s} value={s}>
-              {s.replace("_", " ")}
-            </option>
-          ))}
-        </select>
+        <div className="flex items-center gap-3">
+          <button onClick={loadComplaints} className="text-sm text-teal-600 hover:underline">
+            Refresh
+          </button>
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+            className="rounded-md border border-ink/15 px-3 py-1.5 text-sm"
+          >
+            <option value="all">All statuses</option>
+            {STATUS_OPTIONS.map((s) => (
+              <option key={s} value={s}>
+                {s.replace("_", " ")}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {error && <p className="mt-4 text-sm text-coral-500">{error}</p>}

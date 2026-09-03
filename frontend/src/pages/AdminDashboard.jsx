@@ -83,6 +83,9 @@ export default function AdminDashboard() {
                 <div>
                   <h3 className="font-medium text-ink">{c.subject}</h3>
                   <p className="mt-1 text-sm text-ink/70">{c.description}</p>
+                  <p className="mt-2 text-xs text-ink/50">
+                    Filed by <span className="font-medium text-ink/70">{c.owner.name}</span> ({c.owner.email})
+                  </p>
                 </div>
                 <div className="flex shrink-0 gap-2">
                   <PriorityBadge priority={c.priority} />

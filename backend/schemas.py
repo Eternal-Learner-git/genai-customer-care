@@ -29,6 +29,15 @@ class Token(BaseModel):
     token_type: str = "bearer"
 
 
+class UserSummary(BaseModel):
+    """A trimmed-down user shape, just enough to show who filed a complaint."""
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+    name: str
+    email: EmailStr
+
+
 # ---------- Complaint schemas ----------
 
 class ComplaintCreate(BaseModel):
@@ -56,5 +65,6 @@ class ComplaintOut(BaseModel):
     status: ComplaintStatus
     suggested_response: Optional[str]
     owner_id: int
+    owner: UserSummary
     created_at: datetime
     updated_at: datetime

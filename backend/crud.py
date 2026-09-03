@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 
 import models
 import schemas
@@ -38,12 +38,18 @@ def create_complaint(db: Session, complaint: schemas.ComplaintCreate, owner_id: 
 
 
 def get_complaint(db: Session, complaint_id: int) -> models.Complaint | None:
-    return db.query(models.Complaint).filter(models.Complaint.id == complaint_id).first()
+    return (
+        db.query(models.Complaint)
+        .options(joinedload(models.Complaint.owner))
+        .filter(models.Complaint.id == complaint_id)
+        .first()
+    )
 
 
 def get_complaints_for_user(db: Session, owner_id: int, skip: int = 0, limit: int = 50):
     return (
         db.query(models.Complaint)
+        .options(joinedload(models.Complaint.owner))
         .filter(models.Complaint.owner_id == owner_id)
         .order_by(models.Complaint.created_at.desc())
         .offset(skip)
@@ -55,6 +61,7 @@ def get_complaints_for_user(db: Session, owner_id: int, skip: int = 0, limit: in
 def get_all_complaints(db: Session, skip: int = 0, limit: int = 50):
     return (
         db.query(models.Complaint)
+        .options(joinedload(models.Complaint.owner))
         .order_by(models.Complaint.created_at.desc())
         .offset(skip)
         .limit(limit)
